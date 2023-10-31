@@ -1,0 +1,108 @@
+body {
+  background-color: rgb(18, 18, 19);
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  font-size: 1.6em;
+}
+h1 {
+  text-align: center;
+  margin: 0.25rem;
+}
+.animate__animated.animate__pulse {
+  --animate-duration: 0.25s;
+}
+.guessInput {
+  border: 1px solid white;
+  display: block;
+  margin: 0 auto;
+  padding: 0.25rem;
+  background-color: rgb(18, 18, 19);
+  color: white;
+  text-align: center;
+  font-size: 1em;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  /* border-radius: 0.5rem; */
+  position: absolute;
+  left: -9999px;
+}
+.guessInput:focus {
+  /* border: 1px solid #121213; */
+  outline: none;
+}
+.guessInput:focus::placeholder {
+  color: transparent;
+}
+.guessGrid {
+  /* border: 1px solid white; */
+  width: 19rem;
+  margin: 0 auto;
+  margin-bottom: 0.25rem;
+}
+.guessWord {
+  /* border: 1px solid red; */
+  display: flex;
+}
+.guessBox {
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid #3a3a3c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.25rem;
+}
+.gameOverDialog {
+  outline: none;
+  /* border: 2px solid #3a3a3c; */
+  border: none;
+  background-color: #121213;
+  /* background-color: transparent; */
+  color: white;
+  border-radius: 1rem;
+  text-align: center;
+}
+.gameOverDialog::backdrop {
+  backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.gameOverDialog button {
+  border: none;
+  background: none;
+  color: white;
+  font-size: 1.1em;
+  font-weight: 700;
+  cursor: pointer;
+}
+.restart {
+  display: flex;
+  transition: 200ms ease-in-out;
+}
+.restart:hover {
+  /* transform: scale(1.01); */
+  opacity: 0.8;
+}
+.restart:focus {
+  outline: none;
+}
+/* .keyboard { */
+/* border: 1px solid white; */
+/* } */
+.keyboardRow {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+}
+.keyboardKey {
+  color: white;
+  /* background-color: #818384; */
+  border: none;
+  border-radius: 0.25rem;
+  margin: 0.2rem;
+  padding: 1.25rem 0;
+  font-size: 0.75em;
+  font-weight: 550;
+  min-width: 2.5rem;
+  cursor: pointer;
+}
