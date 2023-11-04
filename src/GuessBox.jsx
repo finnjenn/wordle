@@ -14,9 +14,7 @@ export default function GuessBox({ letter, color }) {
   } else if (color === "dark" && letter !== undefined) {
     boxColor = "#121213";
     boxBorderColor = "#606063";
-  }
-  // if (color === "dark")
-  else {
+  } else {
     boxColor = "#121213";
     boxBorderColor = "#3a3a3c";
   }

@@ -76,8 +76,10 @@ function App() {
     let updatedLetters = { values: [], colors: [] };
     for (let i = 0; i < guess.length; i++) {
       if (guess[i] === correctWord[i]) {
-        updatedLetters.values.push(guess[i]);
-        updatedLetters.colors.push("green");
+        updatedLetters.values.unshift(guess[i]);
+        updatedLetters.colors.unshift("green");
+        // updatedLetters.values.push(guess[i]);
+        // updatedLetters.colors.push("green");
       } else if (correctWord.includes(guess[i])) {
         updatedLetters.values.push(guess[i]);
         updatedLetters.colors.push("yellow");
