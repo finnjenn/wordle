@@ -1,4 +1,4 @@
-import GuessBox from "./guessBox";
+import GuessBox from "./GuessBox";
 import "animate.css";
 export default function GuessWord({ guess }) {
   return (
