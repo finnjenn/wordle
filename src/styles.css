@@ -23,25 +23,21 @@ h1 {
   font-size: 1em;
   font-weight: 900;
   letter-spacing: 0.1em;
-  /* border-radius: 0.5rem; */
   position: absolute;
   left: -9999px;
 }
 .guessInput:focus {
-  /* border: 1px solid #121213; */
   outline: none;
 }
 .guessInput:focus::placeholder {
   color: transparent;
 }
 .guessGrid {
-  /* border: 1px solid white; */
   width: 19rem;
   margin: 0 auto;
   margin-bottom: 0.25rem;
 }
 .guessWord {
-  /* border: 1px solid red; */
   display: flex;
 }
 .guessBox {
@@ -55,10 +51,8 @@ h1 {
 }
 .gameOverDialog {
   outline: none;
-  /* border: 2px solid #3a3a3c; */
   border: none;
   background-color: #121213;
-  /* background-color: transparent; */
   color: white;
   border-radius: 1rem;
   text-align: center;
@@ -75,28 +69,28 @@ h1 {
   font-weight: 700;
   cursor: pointer;
 }
+.gameOverDialog button div {
+  font-size: 0.75em;
+  width: 2rem;
+  height: 2rem;
+  margin: 0.1rem;
+}
 .restart {
   display: flex;
   transition: 200ms ease-in-out;
 }
 .restart:hover {
-  /* transform: scale(1.01); */
   opacity: 0.8;
 }
 .restart:focus {
   outline: none;
 }
-/* .keyboard { */
-/* border: 1px solid white; */
-/* } */
 .keyboardRow {
-  /* border: 1px solid red; */
   display: flex;
   justify-content: center;
 }
 .keyboardKey {
   color: white;
-  /* background-color: #818384; */
   border: none;
   border-radius: 0.25rem;
   margin: 0.2rem;
@@ -108,9 +102,7 @@ h1 {
 }
 @media (max-width: 476px) {
   .keyboardKey {
-    /* color: red; */
     min-width: 2rem;
     padding: 1rem 0;
-    /* font-size: 0.5em; */
   }
 }
