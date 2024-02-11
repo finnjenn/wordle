@@ -106,3 +106,11 @@ h1 {
   min-width: 2.5rem;
   cursor: pointer;
 }
+@media (max-width: 476px) {
+  .keyboardKey {
+    /* color: red; */
+    min-width: 2rem;
+    padding: 1rem 0;
+    font-size: 0.5em;
+  }
+}
