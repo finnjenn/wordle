@@ -1,6 +1,6 @@
 import "./styles.css";
 import { useRef, useState, useEffect } from "react";
-import GuessGrid from "./guessGrid";
+import GuessGrid from "./GuessGrid";
 import GuessBox from "./guessBox";
 import Keyboard from "./Keyboard";
 import wordList from "./wordList";
