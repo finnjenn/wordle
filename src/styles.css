@@ -78,7 +78,7 @@ h1 {
   min-width: 2.5rem;
   cursor: pointer;
 }
-@media (max-width: 476px) {
+@media (max-width: 550px) {
   .keyboardKey {
     min-width: 2rem;
     padding: 1rem 0;
