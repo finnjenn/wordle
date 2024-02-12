@@ -14,7 +14,7 @@ h1 {
 }
 .guessInput {
   position: absolute;
-  /* left: -9999px; */
+  left: -9999px;
 }
 .guessGrid {
   width: 19rem;
