@@ -8,7 +8,6 @@ export default function KeyboardRow({
   inputRef,
   handleGuess,
 }) {
-  //   console.log(colors[values.indexOf(values[0])]);
   return (
     <div className="keyboardRow">
       {values.map((value) => {

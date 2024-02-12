@@ -10,7 +10,6 @@ export default function Keyboard({
 }) {
   return (
     <>
-      {/* <div className="keyboard"> */}
       <KeyboardRow
         values={[
           keyboard[16].value,
@@ -99,11 +98,7 @@ export default function Keyboard({
         guessCount={guessCount}
         inputRef={inputRef}
         handleGuess={handleGuess}
-      >
-        {/* <button>Enter</button> */}
-        {/* <button>DEL</button> */}
-      </KeyboardRow>
-      {/* </div> */}
+      ></KeyboardRow>
     </>
   );
 }

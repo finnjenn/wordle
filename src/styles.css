@@ -13,24 +13,8 @@ h1 {
   --animate-duration: 0.25s;
 }
 .guessInput {
-  border: 1px solid white;
-  display: block;
-  margin: 0 auto;
-  padding: 0.25rem;
-  background-color: rgb(18, 18, 19);
-  color: white;
-  text-align: center;
-  font-size: 1em;
-  font-weight: 900;
-  letter-spacing: 0.1em;
   position: absolute;
-  left: -9999px;
-}
-.guessInput:focus {
-  outline: none;
-}
-.guessInput:focus::placeholder {
-  color: transparent;
+  /* left: -9999px; */
 }
 .guessGrid {
   width: 19rem;
@@ -69,12 +53,6 @@ h1 {
   font-weight: 700;
   cursor: pointer;
 }
-.gameOverDialog button div {
-  font-size: 0.75em;
-  width: 2rem;
-  height: 2rem;
-  margin: 0.1rem;
-}
 .restart {
   display: flex;
   transition: 200ms ease-in-out;
@@ -104,5 +82,11 @@ h1 {
   .keyboardKey {
     min-width: 2rem;
     padding: 1rem 0;
+  }
+  .gameOverDialog button div {
+    font-size: 0.75em;
+    width: 2rem;
+    height: 2rem;
+    margin: 0.1rem;
   }
 }

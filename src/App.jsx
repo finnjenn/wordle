@@ -21,6 +21,10 @@ function App() {
   const [guesses, setGuesses] = useState(baseGridState);
   const [keyboard, setKeyboard] = useState(keys);
   useEffect(() => {
+    document.body.addEventListener("keydown", onKeyDown);
+    return () => document.body.removeEventListener("keydown", onKeyDown);
+  });
+  useEffect(() => {
     if (showDialog === true) {
       dialogRef.current.showModal();
     }
@@ -40,6 +44,9 @@ function App() {
       }
     }
   }, [guessCount]);
+  function onKeyDown() {
+    inputRef.current.focus();
+  }
   function handleInputChange(e) {
     setGuessInput(e.target.value.toUpperCase());
     setGuesses((currentArray) => {
@@ -140,7 +147,6 @@ function App() {
           type="text"
           value={guessInput}
           onChange={handleInputChange}
-          placeholder="5-letter word"
           autoFocus
         />
       </form>
