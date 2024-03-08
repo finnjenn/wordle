@@ -10,9 +10,9 @@ import keys from "./keys";
 
 let randomNum = Math.floor(Math.random() * possibleWords.length);
 let correctWord = possibleWords[randomNum].toUpperCase();
+console.log(correctWord);
 
 function App() {
-  console.log(correctWord);
   let dialogRef = useRef(null);
   let inputRef = useRef(null);
   const [showDialog, setShowDialog] = useState(false);
@@ -20,6 +20,15 @@ function App() {
   const [guessCount, setGuessCount] = useState(0);
   const [guesses, setGuesses] = useState(baseGridState);
   const [keyboard, setKeyboard] = useState(keys);
+  const [width, setWidth] = useState(window.innerWidth);
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth);
+    console.log(width);
+  }
+  useEffect(() => {
+    window.addEventListener("resize", handleWindowSizeChange);
+    return () => window.removeEventListener("resize", handleWindowSizeChange);
+  });
   useEffect(() => {
     document.body.addEventListener("keydown", onKeyDown);
     return () => document.body.removeEventListener("keydown", onKeyDown);
@@ -133,6 +142,7 @@ function App() {
     dialogRef.current.close();
     randomNum = Math.floor(Math.random() * possibleWords.length);
     correctWord = possibleWords[randomNum].toUpperCase();
+    console.log(correctWord);
     inputRef.current.focus();
   }
   return (
@@ -148,6 +158,7 @@ function App() {
           value={guessInput}
           onChange={handleInputChange}
           autoFocus
+          readOnly={width <= 1024 ? "readonly" : false}
         />
       </form>
 
